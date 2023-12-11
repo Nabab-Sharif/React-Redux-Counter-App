@@ -2,10 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-// Import all of Bootstrap's CSS and JS
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
 
+/* The following line can be included in your src/index.js or App.js file */
+//for vite main.jsx , before did file index.js now main.js 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
