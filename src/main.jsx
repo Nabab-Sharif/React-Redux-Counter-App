@@ -2,9 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-
-/* The following line can be included in your src/index.js or App.js file */
-//for vite main.jsx , before did file index.js now main.js 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

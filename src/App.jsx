@@ -1,9 +1,10 @@
-import React from 'react'
+
+import CounterPage from './pages/CounterPage'
 
 const App = () => {
   return (
     <>
-      <h2 className='bg-warning'>Start React-Redux</h2>
+      <CounterPage />
     </>
   )
 }
