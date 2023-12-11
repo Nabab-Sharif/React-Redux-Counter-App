@@ -3,7 +3,7 @@ import React from 'react'
 const App = () => {
   return (
     <>
-      <h2>Start React-Redux</h2>
+      <h2 className='bg-warning'>Start React-Redux</h2>
     </>
   )
 }
