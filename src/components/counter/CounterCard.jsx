@@ -1,5 +1,30 @@
+import { useSelector, useDispatch } from "react-redux"
+import { useState } from "react";
+import { increment, decrement } from "../../redux/state/counter/counterSlice";
 
-const Counter = () => {
+
+
+const CounterCard = () => {
+
+  let [count, setCount] = useState(0);
+
+  let data = useSelector((state) => state)
+  let dispatch = useDispatch();
+  console.log(data.counter.value);
+
+
+  let handleIncrement = () => {
+    count++;
+    setCount(count);
+    dispatch(increment(count))
+  }
+
+  let handleDecrement = () => {
+    count--;
+    setCount(count);
+    dispatch(decrement(count))
+  }
+
   return (
     <>
       <div className="card text-center">
@@ -8,10 +33,10 @@ const Counter = () => {
           <h4 className="text-white text-center">Simple Counter App</h4>
         </div>
         <div className="card-body">
-          <h1>00</h1>
+          <h1>{count}</h1>
           <div className="my-4">
-            <button className="btn btn-success">Increase</button>
-            <button className="btn btn-danger ms-2">Decrease</button>
+            <button onClick={handleIncrement} className="btn btn-success">Increase</button>
+            <button onClick={handleDecrement} className="btn btn-danger ms-2">Decrease</button>
           </div>
         </div>
 
@@ -20,4 +45,4 @@ const Counter = () => {
   )
 }
 
-export default Counter
+export default CounterCard
